@@ -6,8 +6,6 @@ const morgan = require("morgan");
 
 const PORT = process.env.PORT || 3001;
 
-// app.use(express.static(path.join(__dirname, "client/build")));
-
 // log all requests to the console in development
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
