@@ -18,36 +18,36 @@ const airportSchema = new Schema({
     type: String
   },
   latDeg: {
-    type: String
+    type: Number
   },
   latMin: {
-    type: String
+    type: Number
   },
   latSec: {
-    type: String
+    type: Number
   },
   latDirection: {
     type: String
   },
   longDef: {
-    type: String
+    type: Number
   },
   longMin: {
-    type: String
+    type: Number
   },
   longSec: {
-    type: String
+    type: Number
   },
   longDirection: {
     type: String
   },
   altitude: {
-    type: String
+    type: Number
   },
   latDecimalDegrees: {
-    type: String
+    type: Number
   },
   longDecimalDegrees: {
-    type: String
+    type: Number
   }
 });
