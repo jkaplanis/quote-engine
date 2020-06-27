@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const morgan = require("morgan");
+const initDb = require("./config/initDb");
 
 const PORT = process.env.PORT || 3001;
 
@@ -14,6 +15,8 @@ if (process.env.NODE_ENV !== "production") {
 // Setting up express to use json and set it to req.body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+initDb();
 
 // Serve up static assets in production (usually on heroku)
 if (process.env.NODE_ENV === "production") {
