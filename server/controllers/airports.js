@@ -1,8 +1,8 @@
-const db = require("../models");
+const Airports = require("../models/Airports.js");
 
 module.exports = {
   getAllAirports: function (req, res) {
-    db.Airport.find()
+    Airports.find({})
       .then(data => {
         if (data) {
           res.json(data);
