@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const morgan = require("morgan");
 const initDb = require("./config/initDb");
+const airportsRouter = require("./routes/airports");
 
 const PORT = process.env.PORT || 3001;
 
@@ -22,6 +23,8 @@ initDb();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+app.use("/api/airports", airportsRouter);
 
 app.get("/ping", function (req, res) {
   return res.send("pong");

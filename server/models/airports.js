@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const airportSchema = new Schema({
+const AirportSchema = new Schema({
   icaoCode: {
     type: String
   },
@@ -51,3 +51,7 @@ const airportSchema = new Schema({
     type: Number
   }
 });
+
+const Airport = mongoose.model("Airport", AirportSchema);
+
+module.exports = Airport;
